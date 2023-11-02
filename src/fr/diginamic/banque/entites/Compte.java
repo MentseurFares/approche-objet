@@ -24,4 +24,12 @@ public class Compte {
     public int getSoldeCompte() {
         return soldeCompte;
     }
+
+    @Override
+    public String toString() {
+        return "Compte :\t" +
+                "numroCompte=" + numroCompte +"\t"+
+                ", soldeCompte=" + soldeCompte;
+    }
+
 }
