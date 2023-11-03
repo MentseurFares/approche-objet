@@ -23,7 +23,7 @@ public class VilleComparable implements Comparable<VilleComparable> {
 
     @Override
     public String toString() {
-        return nomVille +"\t" +nbHabitants;
+        return nomVille + "\t" + nbHabitants;
     }
 
     public void setNbHabitants(long nbHabitants) {
@@ -32,6 +32,11 @@ public class VilleComparable implements Comparable<VilleComparable> {
 
     @Override
     public int compareTo(VilleComparable ville) {
-        return this.nomVille.compareTo(ville.getNomVille());
+        if (this.nbHabitants == ville.getNbHabitants()) {
+            return 0;
+        }else if(this.nbHabitants>ville.getNbHabitants()){
+            return 1;
+        }
+        return -1;
     }
 }
